@@ -1,0 +1,11 @@
+%Definiert, wie die Akronyme angezeigt werden sollen mit einer neuen Umgebung, die über \begin{listofacronyms} begonnen, mit \acronym{Abkürzung}{Ausgeschriebene Bedeutung} gefüllt und mit \end{listofacronyms} beendet werden kann.
+
+%Akronyme
+\newcommand{\acronym}[2]{
+	\textbf{#1} \> #2\> \\
+}
+
+\newenvironment{listofacronyms}{
+		%\addchap{Abkürzungsverzeichnis} %Auskommentiert, da dieser Befehl bereits in der Datei erscheint, in der die Akronyme definiert werden
+  		\begin{tabbing}
+		\hspace*{3cm} \= \hspace{1cm} \= \hspace{5cm} \\}{\end{tabbing}}

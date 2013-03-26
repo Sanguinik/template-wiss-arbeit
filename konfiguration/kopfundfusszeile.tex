@@ -1,0 +1,16 @@
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\scshape\leftmark}
+%Kopfzeile rechts bzw. außen
+\fancyhead[R]{\thepage}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+
+%Linie unten
+%\renewcommand{\footrulewidth}{0.5pt}
+
+\renewcommand{\chaptermark}[1]{%
+\markboth{\thechapter. \ #1}{}}

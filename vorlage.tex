@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt]{scrreprt}
+\input{konfiguration/packages} %Hier liegen alle Packages, die im Dokument verwendet werden
+\input{konfiguration/silbentrennung} %Datei, die alle Einträge zur Silbentrennung enthält
+\input{konfiguration/kopfundfusszeile} %Definiert die Kopf- und Fußzeile des Dokumentes
+\input{konfiguration/definitionverzeichnisse} 
+\fancypagestyle{plain}{}%Setzt Kopfzeile auf allen Seiten, die plain sind!
+
+\input{konfiguration/glossarconfig}%Beinhaltet alles, was für ein Glossar notwendig ist inkl. Kompillierhinweise
+
+\begin{document}
+\nocite{*}
+
+\pagestyle{empty} %Keine Anzeige von Seitenzahlen, nur der Text, der in den Dokumenten definiert ist, taucht hier auf.
+
+\include{title}
+
+\include{abstract}
+
+\pagestyle{plain} % Ab diesem Zeitpunkt werden die Seiten mit Kopf- und Fußzeile angezeigt
+\pagenumbering{Roman} %Nummerierung der Seiten mit großen römischen Zahlen
+
+\include{konfiguration/inhaltsvz}
+
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}{}
+\include{konfiguration/abbildungsvz}
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}{}
+\include{konfiguration/tabellenvz}
+
+\include{konfiguration/abkuerzungsvz}
+
+\pagestyle{fancy}
+\pagenumbering{arabic} % Nummerierung arabisch
+
+\include{content/einleitung}
+\include{content/theorie}
+\include{content/ist-analyse}
+\include{content/loesungskonzept}
+\include{content/implementierung}
+\include{content/ergebnisse}
+\include{content/fazit-ausblick}
+
+\appendix % Dieser Befehl leitet den Anhang ein
+
+\pagenumbering{alph} % Nummerierung alphanumerisch mit kleinen Buchstaben
+
+
+\include{anhang/anhang}
+
+%Glossar einfügen, sobald es gebraucht wird
+
+\addcontentsline{toc}{chapter}{Glossar}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu
+\include{anhang/glossar}
+
+
+\addcontentsline{toc}{chapter}{Literatur}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu
+
+\bibliographystyle{apasoft}
+\bibliography{konfiguration/sources}
+\thispagestyle{fancy}
+
+\include{erklaerung} % Dieses Dokument hat keinen Seitenstil, da es als Titelseite definiert wurde. Dadurch gibt es hier auch keine Seitenzahl, die da auch nicht stehen soll.
+
+\end{document}

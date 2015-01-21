@@ -20,12 +20,16 @@
 \pagestyle{plain} % Ab diesem Zeitpunkt werden die Seiten mit Kopf- und Fußzeile angezeigt
 \pagenumbering{Roman} %Nummerierung der Seiten mit großen römischen Zahlen
 
-\include{konfiguration/inhaltsvz}
+\include{konfiguration/inhaltsvz} %Inhaltsverzeichnis
 
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}{}
-\include{konfiguration/abbildungsvz}
+\listoffigures %Abbildungsverzeichnis
+
 \addcontentsline{toc}{chapter}{Tabellenverzeichnis}{}
-\include{konfiguration/tabellenvz}
+\listoftables %Tabellenverzeichnis
+
+\addcontentsline{toc}{chapter}{Listings}{}
+\lstlistoflistings %Listings
 
 \include{konfiguration/abkuerzungsvz}
 

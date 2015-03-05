@@ -4,6 +4,18 @@ LaTeX-Template für eine wissenschaftliche Arbeit
 
 ## Hinweise
 
+### Seitenlayout
+
+Das Template ist für den zweiseitigen Druck konfiguriert. Sollte ein einseitiger Druck gewünscht sein, 
+genügt es, die Option ``twoside`` bei der Definition der ``\documentclass`` zu löschen. Die zusätzlichen
+``\cleardoublepage``-Befehle wirken nur bei der Option ``twoside``.
+
+Sollte ein neuer Abschnitt hinzugefügt werden, der für das zweiseitige Drucken eine neue Leerseite benötigt,
+so kann eine Leerseite mit dem Befehl ``\cleardoublepage`` direkt nach dem entsprechendem Abschnitt 
+hinzugefügt werden.
+
+Beim Einfügen von Leerseiten wird die Seitennummerierung weitergezählt.
+
 ### Glossar
 
 ####Beispiel für einen Glossareintrag:

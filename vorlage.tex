@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{scrreprt}
+\documentclass[a4paper,11pt,twoside]{scrreprt}%Für einseitiges Layout Option 'twoside' entfernen
 \input{konfiguration/packages} %Hier liegen alle Packages, die im Dokument verwendet werden
 \input{konfiguration/plugin_listings} %Konfiguration für Listings
 \input{konfiguration/silbentrennung} %Datei, die alle Einträge zur Silbentrennung enthält
@@ -14,8 +14,10 @@
 \pagestyle{empty} %Keine Anzeige von Seitenzahlen, nur der Text, der in den Dokumenten definiert ist, taucht hier auf.
 
 \include{title}
+\cleardoublepage %fügt bei zweiseitigem Layout eine Leerseite ein, insofern sie benötigt wird.
 
 \include{abstract}
+\cleardoublepage
 
 \pagestyle{plain} % Ab diesem Zeitpunkt werden die Seiten mit Kopf- und Fußzeile angezeigt
 \pagenumbering{Roman} %Nummerierung der Seiten mit großen römischen Zahlen
@@ -32,6 +34,7 @@
 \lstlistoflistings %Listings
 
 \include{konfiguration/abkuerzungsvz}
+\cleardoublepage
 
 \pagestyle{fancy}
 \pagenumbering{arabic} % Nummerierung arabisch
@@ -43,7 +46,7 @@
 \include{content/implementierung}
 \include{content/ergebnisse}
 \include{content/fazit-ausblick}
-
+\cleardoublepage
 \appendix % Dieser Befehl leitet den Anhang ein
 
 \pagenumbering{alph} % Nummerierung alphanumerisch mit kleinen Buchstaben
@@ -62,7 +65,7 @@
 \bibliographystyle{apasoft}
 \bibliography{konfiguration/sources}
 \thispagestyle{fancy}
-
+\cleardoublepage
 \include{erklaerung} % Dieses Dokument hat keinen Seitenstil, da es als Titelseite definiert wurde. Dadurch gibt es hier auch keine Seitenzahl, die da auch nicht stehen soll.
 
 \end{document}

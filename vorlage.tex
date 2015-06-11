@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,twoside]{scrreprt}%Für einseitiges Layout Option 'twoside' entfernen
+\documentclass[a4paper,11pt,twoside,pointlessnumbers]{scrreprt}%Für einseitiges Layout Option 'twoside' entfernen
 \input{konfiguration/packages} %Hier liegen alle Packages, die im Dokument verwendet werden
 \input{konfiguration/plugin_listings} %Konfiguration für Listings
 \input{konfiguration/silbentrennung} %Datei, die alle Einträge zur Silbentrennung enthält
@@ -24,16 +24,18 @@
 
 \include{konfiguration/inhaltsvz} %Inhaltsverzeichnis
 
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}{}
 \listoffigures %Abbildungsverzeichnis
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}{}
 
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}{}
 \listoftables %Tabellenverzeichnis
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}{}
 
-\addcontentsline{toc}{chapter}{Listings}{}
 \lstlistoflistings %Listings
+\addcontentsline{toc}{chapter}{Listings}{}
+
 
 \include{konfiguration/abkuerzungsvz}
+\pagestyle{empty}
 \cleardoublepage
 
 \pagestyle{fancy}
@@ -46,6 +48,7 @@
 \include{content/implementierung}
 \include{content/ergebnisse}
 \include{content/fazit-ausblick}
+\pagestyle{empty}
 \cleardoublepage
 \appendix % Dieser Befehl leitet den Anhang ein
 
@@ -60,11 +63,12 @@
 \include{anhang/glossar}
 
 
-\addcontentsline{toc}{chapter}{Literatur}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu
-
 \bibliographystyle{apasoft}
 \bibliography{konfiguration/sources}
 \thispagestyle{fancy}
+\markboth{Literaturverzeichnis}{Literaturverzeichnis}
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu
+\pagestyle{empty}
 \cleardoublepage
 \include{erklaerung} % Dieses Dokument hat keinen Seitenstil, da es als Titelseite definiert wurde. Dadurch gibt es hier auch keine Seitenzahl, die da auch nicht stehen soll.
 

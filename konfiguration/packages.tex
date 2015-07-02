@@ -8,6 +8,12 @@
 
 \usepackage{bibgerm}%Für Literaturverzeichnis
 
+%dickere Schriftart falls gewünscht
+%\usepackage{mathptmx}
+%\usepackage[scaled=.90]{helvet}
+%\usepackage{courier}
+
+
 \usepackage{lipsum}%Zum Einfügen eines Lorem Ipsum Textes
 
 \usepackage{enumitem} %Um Nummerieungen durch Text unterbrechen zu können
@@ -26,6 +32,41 @@
 %Hyperref Package für Links im Dokument
 \usepackage[citecolor = black,colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
 
+% Packete zum anzeigen von Graphen, bsp im anhang
+% pgfplots
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{external}
+\usepgfplotslibrary{dateplot}
+
+% for pgfplots combined bar/line
+
+
+%\tikzexternalize
+%\tikzsetexternalprefix{images/generated/}
+
+%\pgfplotsset{grid style={dashed,gray}}
+\pgfplotsset{minor grid style={dotted,green!50!black}}
+\pgfplotsset{major grid style={dashed,gray}}
+
+\usepackage[eulergreek]{sansmath}
+
+\tikzset{font=\sansmath\sffamily\footnotesize}
+\pgfplotsset{
+	%tick label style = {font=\sansmath\sffamily\footnotesize},
+	%every axis label = {font=\footnotesize\sansmath\sffamily\footnotesize},
+	%legend style = {font=\footnotesize\sansmath\sffamily\footnotesize},
+	%label style = {font=\footnotesize\sansmath\sffamily\footnotesize},
+	%compat=1.3,
+	/pgf/number format/.cd,
+	use comma,
+	1000 sep={.}
+	%every node near coord/.style={/pgf/number format/1000 sep=.},
+	%every axis legend/.style={
+	%y tick label style={/pgf/number format/1000 sep=.},                    
+	%x tick label style={/pgf/number format/1000 sep=.},
+	%}
+}
 
 
 

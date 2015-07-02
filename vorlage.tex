@@ -24,17 +24,7 @@
 
 \include{konfiguration/inhaltsvz} %Inhaltsverzeichnis
 
-\listoffigures %Abbildungsverzeichnis
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}{}
 
-\listoftables %Tabellenverzeichnis
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}{}
-
-\lstlistoflistings %Listings
-\addcontentsline{toc}{chapter}{Listings}{}
-
-
-\include{konfiguration/abkuerzungsvz}
 \pagestyle{empty}
 \cleardoublepage
 
@@ -62,6 +52,20 @@
 \addcontentsline{toc}{chapter}{Glossar}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu
 \include{anhang/glossar}
 
+\listoffigures %Abbildungsverzeichnis
+\markboth{Abbildungsverzeichnis}{Abbildungsverzeichnis}
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}{}
+
+\listoftables %Tabellenverzeichnis
+\markboth{Tabellenverzeichnis}{Tabellenverzeichnis}
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}{}
+
+\lstlistoflistings %Listings
+\markboth{Listings}{Listings}
+\addcontentsline{toc}{chapter}{Listings}{}
+
+
+\include{konfiguration/abkuerzungsvz}
 
 \bibliographystyle{apasoft}
 \bibliography{konfiguration/sources}

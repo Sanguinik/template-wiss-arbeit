@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt,twoside,pointlessnumbers]{scrreprt}%Für einseitiges Layout Option 'twoside' entfernen
-\input{konfiguration/packages} %Hier liegen alle Packages, die im Dokument verwendet werden
 \input{konfiguration/plugin_listings} %Konfiguration für Listings
+\input{konfiguration/packages} %Hier liegen alle Packages, die im Dokument verwendet werden
 \input{konfiguration/silbentrennung} %Datei, die alle Einträge zur Silbentrennung enthält
 \input{konfiguration/kopfundfusszeile} %Definiert die Kopf- und Fußzeile des Dokumentes
 \input{konfiguration/definitionverzeichnisse} 
@@ -67,8 +67,8 @@
 
 \include{konfiguration/abkuerzungsvz}
 
-\bibliographystyle{apasoft}
 \bibliography{konfiguration/sources}
+\bibliographystyle{apasoft}
 \thispagestyle{fancy}
 \markboth{Literaturverzeichnis}{Literaturverzeichnis}
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu

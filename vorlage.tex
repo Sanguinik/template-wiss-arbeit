@@ -6,7 +6,7 @@
 \input{konfiguration/definitionverzeichnisse} 
 \fancypagestyle{plain}{}%Setzt Kopfzeile auf allen Seiten, die plain sind!
 
-\input{konfiguration/glossarconfig}%Beinhaltet alles, was für ein Glossar notwendig ist inkl. Kompillierhinweise
+%\input{konfiguration/glossarconfig}%Beinhaltet alles, was für ein Glossar notwendig ist inkl. Kompillierhinweise
 
 \begin{document}
 \nocite{*}
@@ -49,20 +49,20 @@
 
 %Glossar einfügen, sobald es gebraucht wird
 
-\addcontentsline{toc}{chapter}{Glossar}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu
-\include{anhang/glossar}
+%\addcontentsline{toc}{chapter}{Glossar}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu
+%\include{anhang/glossar}
 
 \listoffigures %Abbildungsverzeichnis
 \markboth{Abbildungsverzeichnis}{Abbildungsverzeichnis}
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}{}
+
 
 \listoftables %Tabellenverzeichnis
 \markboth{Tabellenverzeichnis}{Tabellenverzeichnis}
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}{}
+
 
 \lstlistoflistings %Listings
 \markboth{Listings}{Listings}
-\addcontentsline{toc}{chapter}{Listings}{}
+
 
 
 \include{konfiguration/abkuerzungsvz}
@@ -71,7 +71,7 @@
 \bibliographystyle{apasoft}
 \thispagestyle{fancy}
 \markboth{Literaturverzeichnis}{Literaturverzeichnis}
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}{}%Fügt Kapitel zum Inhaltsverzeichnis hinzu
+
 \pagestyle{empty}
 \cleardoublepage
 \include{erklaerung} % Dieses Dokument hat keinen Seitenstil, da es als Titelseite definiert wurde. Dadurch gibt es hier auch keine Seitenzahl, die da auch nicht stehen soll.
